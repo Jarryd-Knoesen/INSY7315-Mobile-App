@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+    <LinearLayout
+        android:id="@+id/topButtonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btnMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginVertical="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:padding="12dp"
+                android:stateListAnimator="@null"
+                android:text="Menu" />
+
+    </LinearLayout>
+
+    <!-- Side Menu Content -->
+    <LinearLayout
+        android:id="@+id/menuLayout"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#AA000000"
+        android:padding="16dp"
+        android:layout_gravity="start">
+
+        <TextView
+            android:id="@+id/smApplications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Applications"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginTop="50dp"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/smCommunication"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Communication"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginTop="50dp"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/smDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dashboard"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/smNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notes"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/smMaintenanceOverview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Maintenance Overview"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/smMaintenanceRequests"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Maintenance Requests"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/smMaintenanceTasks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Maintenance Tasks"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/smMyLease"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Lease"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/smPaymentsPM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payments PM"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/smPaymentsTenant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payments Tenants"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/smPropertiesPM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Properties PM"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/smPropertiesAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Properties Admin"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/smPropertyListingsTenant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Property Listings Tenant"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/smTenants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tenants"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/smReports"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reports"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:padding="8dp"/>
+    </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
