@@ -22,7 +22,7 @@
         android:title="Profile" />
 
     <item
-        android:id="@+id/nav_properties"
-        android:icon="@drawable/residential"
-        android:title="Properties" />
+        android:id="@+id/nav_payments"
+        android:icon="@drawable/online_payment"
+        android:title="Payments" />
 </menu>
