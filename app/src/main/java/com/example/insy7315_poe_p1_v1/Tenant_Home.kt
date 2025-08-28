@@ -1,8 +1,10 @@
 package com.example.insy7315_poe_p1_v1
 import com.example.insy7315_poe_p1_v1.Tenant_Fragments.HomeFragment
 import com.example.insy7315_poe_p1_v1.Tenant_Fragments.MaintenanceFragment
+import com.example.insy7315_poe_p1_v1.Tenant_Fragments.PaymentHistoryFragment
 
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -19,6 +21,15 @@ class Tenant_Home : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        // Enables back button on the action bar
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+
+        supportFragmentManager.addOnBackStackChangedListener {
+            val canGoBack = supportFragmentManager.backStackEntryCount > 0
+            supportActionBar?.setDisplayHomeAsUpEnabled(canGoBack)
         }
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
@@ -52,8 +63,8 @@ class Tenant_Home : AppCompatActivity() {
                     true
                 }
 
-                R.id.nav_properties -> {
-                    //replaceFragment(PropertiesFragment())
+                R.id.nav_payments -> {
+                    replaceFragment(PaymentHistoryFragment())
                     true
                 }
 
@@ -62,10 +73,23 @@ class Tenant_Home : AppCompatActivity() {
         }
     }
 
-    fun replaceFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
+    fun replaceFragment(fragment: Fragment, addToBackStack: Boolean = false) {
+        val transaction = supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, fragment)
-            .commit()
+
+        if (addToBackStack) {
+            transaction.addToBackStack(null)
+        }
+
+        transaction.commit()
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == android.R.id.home) {
+            onBackPressedDispatcher.onBackPressed()
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
 
 }
