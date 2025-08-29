@@ -1,7 +1,10 @@
 package com.example.insy7315_poe_p1_v1
+import android.annotation.SuppressLint
 import com.example.insy7315_poe_p1_v1.Tenant_Fragments.HomeFragment
 import com.example.insy7315_poe_p1_v1.Tenant_Fragments.MaintenanceFragment
 import com.example.insy7315_poe_p1_v1.Tenant_Fragments.PaymentHistoryFragment
+import com.example.insy7315_poe_p1_v1.Tenant_Fragments.MessagesFragment
+import com.example.insy7315_poe_p1_v1.R
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -21,15 +24,6 @@ class Tenant_Home : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
-        }
-
-        // Enables back button on the action bar
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setDisplayShowHomeEnabled(true)
-
-        supportFragmentManager.addOnBackStackChangedListener {
-            val canGoBack = supportFragmentManager.backStackEntryCount > 0
-            supportActionBar?.setDisplayHomeAsUpEnabled(canGoBack)
         }
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
@@ -54,7 +48,7 @@ class Tenant_Home : AppCompatActivity() {
                 }
 
                 R.id.nav_messages -> {
-                    //replaceFragment(MessagesFragment())
+                    replaceFragment(MessagesFragment())
                     true
                 }
 
@@ -82,14 +76,6 @@ class Tenant_Home : AppCompatActivity() {
         }
 
         transaction.commit()
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == android.R.id.home) {
-            onBackPressedDispatcher.onBackPressed()
-            return true
-        }
-        return super.onOptionsItemSelected(item)
     }
 
 }

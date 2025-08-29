@@ -13,11 +13,127 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" >
 
-        <TextView
-            android:id="@+id/textView24"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="This will be for making payments"
-            android:layout_gravity="center"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_gravity="end"
+                android:text="Back" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text="Make Payment"
+                android:textSize="20sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:text="Card Holder Name"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/etCardHolderName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="20dp"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Name on card here" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Card Number"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/etCardNumber"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="20dp"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Card number here" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textView30"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Expiry Date"
+                        android:textSize="15sp"/>
+
+                    <EditText
+                        android:id="@+id/etExpiryDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:ems="10"
+                        android:inputType="date"
+                        android:hint="Date here"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textView31"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CVV"
+                        android:textSize="15sp"/>
+
+                    <EditText
+                        android:id="@+id/etCVV"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:hint="CVV here"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnMakePayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="35dp"
+                android:layout_marginTop="50dp"
+                android:text="Make Payment" />
+
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
