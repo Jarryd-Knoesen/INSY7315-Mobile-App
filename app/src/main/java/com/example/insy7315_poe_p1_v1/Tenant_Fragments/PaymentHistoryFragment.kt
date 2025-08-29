@@ -16,8 +16,6 @@ class PaymentHistoryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.tenant_fragment_payment_history, container, false)
-//        // Inflate the layout for this fragment
-//        return inflater.inflate(R.layout.tenant_fragment_payment_history, container, false)
 
         // Set button click listener
         val btnMakePayment = view.findViewById<Button>(R.id.btnMakePayment)
