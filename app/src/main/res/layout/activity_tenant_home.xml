@@ -8,20 +8,30 @@
     tools:context=".Tenant_Home">
 
 
-    <!-- Where fragments will load -->
-    <FrameLayout
-        android:id="@+id/fragment_container"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/bottom_navigation" />
+        android:layout_height="match_parent">
 
-    <!-- Bottom Navigation -->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="-55dp"
-        android:layout_gravity="bottom"
-        app:menu="@menu/tenant_bottom_nav_menu"/>
+        <!-- Fragments container -->
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <!-- Bottom navigation -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-55dp"
+            app:menu="@menu/tenant_bottom_nav_menu"/>
+    </LinearLayout>
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+<!--    android:layout_marginBottom="-55dp"-->
+<!--    android:layout_gravity="bottom"-->

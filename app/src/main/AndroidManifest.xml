@@ -17,7 +17,7 @@
             android:exported="false" />
         <activity
             android:name=".Tenant_Home"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".Home"
             android:exported="false" />

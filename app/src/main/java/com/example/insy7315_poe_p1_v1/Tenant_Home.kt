@@ -1,18 +1,17 @@
 package com.example.insy7315_poe_p1_v1
-import android.annotation.SuppressLint
 import com.example.insy7315_poe_p1_v1.Tenant_Fragments.HomeFragment
-import com.example.insy7315_poe_p1_v1.Tenant_Fragments.MaintenanceFragment
+import com.example.insy7315_poe_p1_v1.Tenant_Fragments.MaintenanceHistoryFragment
 import com.example.insy7315_poe_p1_v1.Tenant_Fragments.PaymentHistoryFragment
 import com.example.insy7315_poe_p1_v1.Tenant_Fragments.MessagesFragment
-import com.example.insy7315_poe_p1_v1.R
+import com.example.insy7315_poe_p1_v1.Tenant_Fragments.ProfileFragment
 
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import com.example.insy7315_poe_p1_v1.Tenant_Fragments.UsersListFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class Tenant_Home : AppCompatActivity() {
@@ -43,17 +42,17 @@ class Tenant_Home : AppCompatActivity() {
                 }
 
                 R.id.nav_maintenance -> {
-                    replaceFragment(MaintenanceFragment())
+                    replaceFragment(MaintenanceHistoryFragment())
                     true
                 }
 
                 R.id.nav_messages -> {
-                    replaceFragment(MessagesFragment())
+                    replaceFragment(UsersListFragment())
                     true
                 }
 
                 R.id.nav_profile -> {
-                    //replaceFragment(ProfileFragment())
+                    replaceFragment(ProfileFragment())
                     true
                 }
 
