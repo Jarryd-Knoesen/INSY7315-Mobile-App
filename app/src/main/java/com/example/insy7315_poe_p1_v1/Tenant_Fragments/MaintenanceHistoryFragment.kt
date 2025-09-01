@@ -1,5 +1,6 @@
 package com.example.insy7315_poe_p1_v1.Tenant_Fragments
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,39 +12,37 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.insy7315_poe_p1_v1.Adapters.MaintenanceRequestAdapter
-import com.example.insy7315_poe_p1_v1.Adapters.PaymentsAdapter
 import com.example.insy7315_poe_p1_v1.Models.MaintenanceRequestModel
-import com.example.insy7315_poe_p1_v1.Models.PaymentModel
-import com.example.insy7315_poe_p1_v1.Models.PaymentRepository
+import com.example.insy7315_poe_p1_v1.Models.MaintenanceRequestRepository
 
-class PaymentHistoryFragment : Fragment() {
+class MaintenanceHistoryFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: PaymentsAdapter
-    private lateinit var paymentsList: List<PaymentModel>
+    private lateinit var adapter: MaintenanceRequestAdapter
+    private lateinit var requestList: List<MaintenanceRequestModel>
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.tenant_fragment_payment_history, container, false)
+        // Inflate layout first
+        val view = inflater.inflate(R.layout.tenant_fragment_maintenance_history, container, false)
 
         // Setup RecyclerView
-        recyclerView = view.findViewById(R.id.taskPaymentsRecyclerView)
+        recyclerView = view.findViewById(R.id.taskMaintenanceRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
         // Example data
-        paymentsList = PaymentRepository.payments
-        adapter = PaymentsAdapter(paymentsList)
+        requestList = MaintenanceRequestRepository.maintenanceRequests
+        adapter = MaintenanceRequestAdapter(requestList)
         recyclerView.adapter = adapter
 
-        // Set button click listener
-        val btnMakePayment = view.findViewById<Button>(R.id.btnMakePayment)
-
-        btnMakePayment.setOnClickListener {
+        // Button setup
+        val btnMakeRequest = view.findViewById<Button>(R.id.btnMakeRequest)
+        btnMakeRequest.setOnClickListener {
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, MakePaymentFragment())
-                .addToBackStack(null) // Lets the user press back to return here
+                .replace(R.id.fragment_container, MaintenanceFragment())
+                .addToBackStack(null)
                 .commit()
 
             (requireActivity() as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
