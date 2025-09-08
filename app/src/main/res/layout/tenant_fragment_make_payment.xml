@@ -25,14 +25,14 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
                 android:layout_gravity="end"
-                android:text="Back" />
+                android:text="@string/btn_back" />
 
             <TextView
                 android:id="@+id/textView26"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="5dp"
-                android:text="Make Payment"
+                android:text="@string/make_payment_title"
                 android:textSize="20sp"
                 android:gravity="center"/>
 
@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="10dp"
-                android:text="Card Holder Name"
+                android:text="@string/card_holder_name_label"
                 android:textSize="15sp"/>
 
             <EditText
@@ -53,14 +53,14 @@
                 android:layout_marginBottom="20dp"
                 android:ems="10"
                 android:inputType="text"
-                android:hint="Name on card here" />
+                android:hint="@string/hint_card_holder_name" />
 
             <TextView
                 android:id="@+id/textView28"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="Card Number"
+                android:text="@string/card_number_label"
                 android:textSize="15sp"/>
 
             <EditText
@@ -71,7 +71,7 @@
                 android:layout_marginBottom="20dp"
                 android:ems="10"
                 android:inputType="text"
-                android:hint="Card number here" />
+                android:hint="@string/hint_card_number" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -90,7 +90,7 @@
                         android:id="@+id/textView30"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Expiry Date"
+                        android:text="@string/expiry_date_label"
                         android:textSize="15sp"/>
 
                     <EditText
@@ -99,7 +99,7 @@
                         android:layout_height="50dp"
                         android:ems="10"
                         android:inputType="date"
-                        android:hint="Date here"/>
+                        android:hint="@string/hint_expiry_date"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -113,7 +113,7 @@
                         android:id="@+id/textView31"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="CVV"
+                        android:text="@string/cvv_label"
                         android:textSize="15sp"/>
 
                     <EditText
@@ -122,7 +122,7 @@
                         android:layout_height="50dp"
                         android:ems="10"
                         android:inputType="number"
-                        android:hint="CVV here"/>
+                        android:hint="@string/hint_cvv"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -132,7 +132,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="35dp"
                 android:layout_marginTop="50dp"
-                android:text="Make Payment" />
+                android:text="@string/btn_make_payment" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
-                android:text="Back"
+                android:text="@string/btn_back"
                 android:layout_gravity="end"/>
 
             <TextView
@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
-                android:text="Maintenance Request"
+                android:text="@string/maintenance_request_title"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:gravity="center"/>
@@ -43,7 +43,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="Maintenance Location:"
+                android:text="@string/maintenance_location_label"
                 android:textSize="15sp"/>
 
             <EditText
@@ -54,14 +54,14 @@
                 android:layout_marginBottom="15dp"
                 android:ems="10"
                 android:inputType="text"
-                android:hint="Block and Unit Number"/>
+                android:hint="@string/hint_block_unit_number"/>
 
             <TextView
                 android:id="@+id/textView10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="Concern:"
+                android:text="@string/concern_label"
                 android:textSize="15sp"/>
 
             <EditText
@@ -73,14 +73,14 @@
                 android:ems="10"
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
-                android:hint="Describe your issue"/>
+                android:hint="@string/hint_concern"/>
 
             <TextView
                 android:id="@+id/textView11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="If the repair relates to appliances, list them below:"
+                android:text="@string/appliances_label"
                 android:textSize="15sp"/>
 
             <EditText
@@ -92,14 +92,14 @@
                 android:ems="10"
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
-                android:hint="Appliances"/>
+                android:hint="@string/hint_appliances"/>
 
             <TextView
                 android:id="@+id/textView12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="Preferred Time and Date:"
+                android:text="@string/preferred_time_date_label"
                 android:textSize="15sp"/>
 
             <EditText
@@ -109,7 +109,7 @@
                 android:layout_marginHorizontal="10dp"
                 android:ems="10"
                 android:inputType="time"
-                android:hint="Time here"/>
+                android:hint="@string/hint_time"/>
 
             <EditText
                 android:id="@+id/etDate"
@@ -118,7 +118,7 @@
                 android:layout_marginHorizontal="10dp"
                 android:ems="10"
                 android:inputType="date"
-                android:hint="Date here"/>
+                android:hint="@string/hint_date"/>
 
             <Button
                 android:id="@+id/btnSubmitRequest"
@@ -126,7 +126,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:layout_marginHorizontal="50dp"
-                android:text="Submit Request" />
+                android:text="@string/btn_submit_request" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

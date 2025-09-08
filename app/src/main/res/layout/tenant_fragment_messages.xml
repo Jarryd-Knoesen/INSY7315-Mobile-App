@@ -45,14 +45,14 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:hint="Type a message" />
+            android:hint="@string/hint_type_message" />
 
         <Button
             android:id="@+id/btnSend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="Send" />
+            android:text="@string/btn_send" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

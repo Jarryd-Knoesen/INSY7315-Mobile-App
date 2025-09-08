@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">INSY7315_POE_P1_V1</string>
+    <string name="rent_status">Huurstatus</string>
+    <string name="rent_paid_overdue">Betaal / Agterstallig</string>
+    <string name="rent_amount">Bedrag</string>
+    <string name="next_payment_date">Volgende Betaaldatum</string>
+    <string name="maintenance_requests">Onderhoudsversoeke</string>
+    <string name="requests_open">Aantal versoeke oop:</string>
+    <string name="btn_back">Terug</string>
+    <string name="btn_submit_request">Dien Versoek In</string>
+    <string name="maintenance_request_title">Onderhoudsversoek</string>
+    <string name="maintenance_location_label">Onderhoudsplek:</string>
+    <string name="concern_label">Probleem:</string>
+    <string name="appliances_label">Indien die herstelwerk verband hou met toestelle, lys dit hieronder:</string>
+    <string name="preferred_time_date_label">Voorkeur tyd en datum:</string>
+    <string name="hint_block_unit_number">Blok- en Eenheidsnommer</string>
+    <string name="hint_concern">Beskryf jou probleem</string>
+    <string name="hint_appliances">Toestelle</string>
+    <string name="hint_time">Tyd hier</string>
+    <string name="hint_date">Datum hier</string>
+    <string name="maintenance_requests_title">Onderhoudsversoeke</string>
+    <string name="btn_make_request">Dien Versoek In</string>
+    <string name="table_header_issue">Probleem</string>
+    <string name="table_header_status">Status</string>
+    <string name="table_header_report_date">Verslagdatum</string>
+    <string name="btn_make_payment">Betaal</string>
+    <string name="make_payment_title">Betaal</string>
+    <string name="card_holder_name_label">Kaarthouernaam</string>
+    <string name="card_number_label">Kaartnommer</string>
+    <string name="expiry_date_label">Vervaldatum</string>
+    <string name="cvv_label">CVV</string>
+    <string name="hint_card_holder_name">Naam op kaart hier</string>
+    <string name="hint_card_number">Kaartnommer hier</string>
+    <string name="hint_expiry_date">Datum hier</string>
+    <string name="hint_cvv">CVV hier</string>
+    <string name="hint_type_message">Tik \'n boodskap</string>
+    <string name="btn_send">Stuur</string>
+    <string name="payment_history_title">Betalingsgeskiedenis</string>
+    <string name="btn_go_to_make_payment">Betaal \'n bedrag</string>
+    <string name="table_header_amount">Bedrag</string>
+    <string name="table_header_payment_date">Betaaldatum</string>
+    <string name="btn_settings">Instellings</string>
+    <string name="btn_lease">My Huurkontrak</string>
+</resources>

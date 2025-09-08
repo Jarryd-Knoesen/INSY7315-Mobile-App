@@ -1,6 +1,7 @@
 package com.example.insy7315_poe_p1_v1
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -21,6 +22,17 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        // Initialize shared preferences with default values if they don't exist
+        val sharedPref = getSharedPreferences("AppSettings", Context.MODE_PRIVATE)
+        if (!sharedPref.contains("DarkMode")) {
+            with(sharedPref.edit()) {
+                putBoolean("DarkMode", false)
+                putString("Language", "en")
+                apply()
+            }
+        }
+
 
         val login = findViewById<Button>(R.id.btnLogin)
         val signup = findViewById<TextView>(R.id.tvSignup)
