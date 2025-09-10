@@ -1,4 +1,4 @@
-package com.example.insy7315_poe_p1_v1.Tenant_Fragments
+package com.example.insy7315_poe_p1_v1.FragmentsForAll
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View

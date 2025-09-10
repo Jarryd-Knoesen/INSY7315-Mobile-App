@@ -1,4 +1,4 @@
-package com.example.insy7315_poe_p1_v1.Tenant_Fragments
+package com.example.insy7315_poe_p1_v1.FragmentsForAll
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.example.insy7315_poe_p1_v1.R
 import androidx.appcompat.widget.SwitchCompat
-import android.content.Context
+import android.content.SharedPreferences
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.AdapterView
@@ -64,7 +64,7 @@ class SettingsFragment : Fragment() {
     // ------------------------
     // Dark Mode Functions
     // ------------------------
-    private fun setupDarkMode(swDarkMode: SwitchCompat, sharedPref: android.content.SharedPreferences) {
+    private fun setupDarkMode(swDarkMode: SwitchCompat, sharedPref: SharedPreferences) {
         val isDarkMode = sharedPref.getBoolean("DarkMode", true)
         swDarkMode.isChecked = isDarkMode
 
@@ -90,7 +90,7 @@ class SettingsFragment : Fragment() {
     // ------------------------
     // Language Spinner Functions
     // ------------------------
-    private fun setupLanguageSpinner(spLanguages: Spinner, sharedPref: android.content.SharedPreferences) {
+    private fun setupLanguageSpinner(spLanguages: Spinner, sharedPref: SharedPreferences) {
         val languages = listOf("English", "Afrikaans")
         val languagesCodes = listOf("en", "af")
 

@@ -21,7 +21,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:layout_gravity="end"
-            android:text="Back" />
+            android:text="@string/btn_back" />
 
         <TextView
             android:id="@+id/textView25"
@@ -30,13 +30,13 @@
             android:layout_marginBottom="20dp"
             android:gravity="center"
             android:textSize="18sp"
-            android:text="Settings" />
+            android:text="@string/settings_title" />
 
         <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/swDarkMode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dark Mode"
+            android:text="@string/switch_dark_mode"
             android:layout_marginHorizontal="100dp"
             android:layout_marginTop="16dp"/>
 
@@ -51,7 +51,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Language" />
+                android:text="@string/label_language" />
 
             <Spinner
                 android:id="@+id/spLanguage"
@@ -64,7 +64,7 @@
             android:id="@+id/btnSaveSettings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Save Language"
+            android:text="@string/btn_save_language"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"/>
 

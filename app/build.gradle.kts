@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.insy7315_poe_p1_v1"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.insy7315_poe_p1_v1"

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Tenant_Home">
+    tools:context=".Caretaker_Home">
 
     <LinearLayout
         android:orientation="vertical"
@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="-55dp"
-            app:menu="@menu/tenant_bottom_nav_menu"/>
+            app:menu="@menu/caretaker_bottom_nav_menu"/>
     </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

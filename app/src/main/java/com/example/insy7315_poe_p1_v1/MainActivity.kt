@@ -57,27 +57,27 @@ class MainActivity : AppCompatActivity() {
 //                apply()
 //            }
 
-            val userType = "Tenant";
+            val userType = "Caretaker"
 
-            if (userType == "Tenant") {
-                startActivity(Intent(this, Tenant_Home::class.java))
-                finish()
+            when (userType) {
+                "Tenant" -> {
+                    startActivity(Intent(this, Tenant_Home::class.java))
+                    finish()
+                }
+                "Manager" -> {
+                    // startActivity(Intent(this, Manager_Home::class.java))
+                    finish()
+                }
+                "Caretaker" -> {
+                    startActivity(Intent(this, Caretaker_Home::class.java))
+                    finish()
+                }
+                "Admin" -> {
+                    startActivity(Intent(this, Admin_Home::class.java))
+                    finish()
+                }
             }
 
-            if (userType == "Manager") {
-                //startActivity(Intent(this, Manager_Home::class.java))
-                finish()
-            }
-
-            if (userType == "Caretaker") {
-                //startActivity(Intent(this, Caretaker_Home::class.java))
-                finish()
-            }
-
-            if (userType == "Admin") {
-                startActivity(Intent(this, Admin_Home::class.java))
-                finish()
-            }
         }
 
         signup.setOnClickListener {

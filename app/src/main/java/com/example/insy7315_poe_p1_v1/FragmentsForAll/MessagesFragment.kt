@@ -1,4 +1,4 @@
-package com.example.insy7315_poe_p1_v1.Tenant_Fragments
+package com.example.insy7315_poe_p1_v1.FragmentsForAll
 
 import android.annotation.SuppressLint
 import android.os.Bundle

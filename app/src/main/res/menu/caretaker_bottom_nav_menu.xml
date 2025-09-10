@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_maintenance"
+        android:icon="@drawable/optimizing"
+        android:title="Tasks" />
+
+    <item
+        android:id="@+id/nav_notes"
+        android:icon="@drawable/icons8_notes_50"
+        android:title="Notes" />
+
+    <item
+        android:id="@+id/nav_communication"
+        android:icon="@drawable/message"
+        android:title="Communication" />
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/user"
+        android:title="Profile" />
+</menu>
