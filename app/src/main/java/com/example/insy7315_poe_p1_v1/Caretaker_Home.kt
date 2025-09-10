@@ -1,24 +1,23 @@
 package com.example.insy7315_poe_p1_v1
 
-import com.example.insy7315_poe_p1_v1.Tenant_Fragments.HomeFragment
-import com.example.insy7315_poe_p1_v1.Tenant_Fragments.MaintenanceHistoryFragment
-import com.example.insy7315_poe_p1_v1.Tenant_Fragments.PaymentHistoryFragment
-import com.example.insy7315_poe_p1_v1.FragmentsForAll.ProfileFragment
-
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import androidx.core.view.WindowInsetsCompat
+import com.example.insy7315_poe_p1_v1.Caretaker_Fragments.TasksFragment
+import com.example.insy7315_poe_p1_v1.FragmentsForAll.ProfileFragment
 import com.example.insy7315_poe_p1_v1.FragmentsForAll.UsersListFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class Tenant_Home : AppCompatActivity() {
+class Caretaker_Home : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_tenant_home)
+        setContentView(R.layout.activity_caretaker_home)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -30,34 +29,29 @@ class Tenant_Home : AppCompatActivity() {
         // Set default fragment
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, HomeFragment())
+                .replace(R.id.fragment_container, TasksFragment())
                 .commit()
         }
 
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.nav_home -> {
-                    replaceFragment(HomeFragment())
-                    true
-                }
-
                 R.id.nav_maintenance -> {
-                    replaceFragment(MaintenanceHistoryFragment())
+                    replaceFragment(TasksFragment())
                     true
                 }
 
-                R.id.nav_messages -> {
+                R.id.nav_notes -> {
+                    replaceFragment(TasksFragment())
+                    true
+                }
+
+                R.id.nav_communication -> {
                     replaceFragment(UsersListFragment())
                     true
                 }
 
                 R.id.nav_profile -> {
                     replaceFragment(ProfileFragment())
-                    true
-                }
-
-                R.id.nav_payments -> {
-                    replaceFragment(PaymentHistoryFragment())
                     true
                 }
 
@@ -76,5 +70,4 @@ class Tenant_Home : AppCompatActivity() {
 
         transaction.commit()
     }
-
 }

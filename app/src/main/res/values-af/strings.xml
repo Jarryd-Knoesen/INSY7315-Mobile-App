@@ -42,4 +42,26 @@
     <string name="table_header_payment_date">Betaaldatum</string>
     <string name="btn_settings">Instellings</string>
     <string name="btn_lease">My Huurkontrak</string>
+    <string name="settings_title">Instellings</string>
+    <string name="btn_save_language">Stoor Taal</string>
+    <string name="switch_dark_mode">Donker Modus</string>
+    <string name="label_language">Taal</string>
+    <string name="signup_title">Registreer</string>
+    <string name="login_title">Meld Aan</string>
+    <string name="label_first_name">Voornaam:</string>
+    <string name="label_surname">Van:</string>
+    <string name="label_phone_number">Telefoonnommer:</string>
+    <string name="label_email">E-pos:</string>
+    <string name="label_password">Wagwoord:</string>
+    <string name="label_already_have_account">Het jy reeds ’n rekening?</string>
+    <string name="label_dont_have_account">Nog nie ’n rekening nie?</string>
+    <string name="hint_first_name">Voornaam Hier</string>
+    <string name="hint_surname">Van Hier</string>
+    <string name="hint_phone_number">Telefoonnommer Hier</string>
+    <string name="hint_email">E-pos Hier</string>
+    <string name="hint_password">Wagwoord Hier</string>
+    <string name="btn_signup">Registreer</string>
+    <string name="tasks_title">Take</string>
+    <string name="header_fix_date">Herstel Datum</string>
+    <string name="header_unit">Eenheid</string>
 </resources>

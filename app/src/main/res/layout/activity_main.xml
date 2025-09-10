@@ -53,7 +53,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:text="Email:"
+                        android:text="@string/label_email"
                         android:gravity="bottom"/>
 
                     <EditText
@@ -62,7 +62,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="1.1"
                         android:ems="10"
-                        android:hint="Email Here"
+                        android:hint="@string/hint_email"
                         android:inputType="textEmailAddress" />
 
                     <TextView
@@ -70,7 +70,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:text="Password"
+                        android:text="@string/label_password"
                         android:gravity="bottom"/>
 
                     <EditText
@@ -79,7 +79,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="1.1"
                         android:ems="10"
-                        android:hint="Password Here"
+                        android:hint="@string/hint_password"
                         android:inputType="textPassword" />
 
                     <TextView
@@ -88,7 +88,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="0.5"
                         android:gravity="center"
-                        android:text="Don't have an account?"
+                        android:text="@string/label_dont_have_account"
                         android:layout_marginTop="20dp"/>
 
                     <TextView
@@ -96,7 +96,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="0.5"
-                        android:text="Signup"
+                        android:text="@string/signup_title"
                         android:gravity="center"
                         android:textColor="#0473FF" />
 
@@ -106,7 +106,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:backgroundTint="#FF9D00"
-                        android:text="Login" />
+                        android:text="@string/login_title" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
