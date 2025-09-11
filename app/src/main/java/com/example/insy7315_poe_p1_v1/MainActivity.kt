@@ -11,6 +11,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.insy7315_poe_p1_v1.Models.UsersModel
+import com.example.insy7315_poe_p1_v1.Models.UsersRepository
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,24 +45,25 @@ class MainActivity : AppCompatActivity() {
 
         login.setOnClickListener {
             // error check user authentication
-//            val email = emailInput.text.toString()
-//            val password = passwordInput.text.toString()
-//
-//            if (!isUserValid(password, email)) {
-//                emailInput.error = "Email or Password is invalid"
-//                passwordInput.error = "Email or Password is invalid"
-//                return@setOnClickListener
-//            }
+            val email = emailInput.text.toString()
+            val password = passwordInput.text.toString()
 
-//            val sharedPref = getSharedPreferences("UserData", MODE_PRIVATE)
-//            with(sharedPref.edit()) {
-//                putString("userType", "Guest") //this will be to determine the user type
-//                apply()
-//            }
+            val user = getUserIfValid(password, email)
 
-            val userType = "Caretaker"
+            if (user == null) {
+                emailInput.error = "Invalid email or password"
+                passwordInput.error = "Invalid email or password"
+                return@setOnClickListener
+            }
 
-            when (userType) {
+            // Redirect userType to sharedPreferences
+            val sharedPref = getSharedPreferences("UserData", MODE_PRIVATE)
+            with(sharedPref.edit()) {
+                putString("userType", user.userType) //this will be to determine the user type
+                apply()
+            }
+
+            when (user.userType) {
                 "Tenant" -> {
                     startActivity(Intent(this, Tenant_Home::class.java))
                     finish()
@@ -87,8 +91,9 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun isUserValid(password: String, email: String): Boolean {
-        // put the code to check the database here
-        return true
+    fun getUserIfValid(password: String, email: String): UsersModel? {
+        return UsersRepository.users.find {
+            it.email == email && it.password == password
+        }
     }
 }

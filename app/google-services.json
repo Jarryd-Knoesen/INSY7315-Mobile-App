@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "396498484172",
+    "project_id": "insy7315",
+    "storage_bucket": "insy7315.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396498484172:android:0acf2e069f52f6018b3b69",
+        "android_client_info": {
+          "package_name": "com.example.insy7315_poe_p1_v1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPgY5tvdzBpWnoK_4xWMECdkV6CtdBm2g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

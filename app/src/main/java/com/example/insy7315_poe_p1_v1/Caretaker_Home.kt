@@ -11,6 +11,8 @@ import com.example.insy7315_poe_p1_v1.Caretaker_Fragments.TasksFragment
 import com.example.insy7315_poe_p1_v1.FragmentsForAll.ProfileFragment
 import com.example.insy7315_poe_p1_v1.FragmentsForAll.UsersListFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.Firebase
+import com.google.firebase.analytics.analytics
 
 class Caretaker_Home : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -32,25 +34,32 @@ class Caretaker_Home : AppCompatActivity() {
                 .replace(R.id.fragment_container, TasksFragment())
                 .commit()
         }
+        val bundle = Bundle().apply {
+            putString("user_type", "caretaker")
+        }
 
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_maintenance -> {
+                    Firebase.analytics.logEvent("Tasks_button_click", bundle)
                     replaceFragment(TasksFragment())
                     true
                 }
 
                 R.id.nav_notes -> {
+                    Firebase.analytics.logEvent("Notes_button_click", bundle)
                     replaceFragment(TasksFragment())
                     true
                 }
 
                 R.id.nav_communication -> {
+                    Firebase.analytics.logEvent("Communication_button_click", bundle)
                     replaceFragment(UsersListFragment())
                     true
                 }
 
                 R.id.nav_profile -> {
+                    Firebase.analytics.logEvent("Profile_button_click", bundle)
                     replaceFragment(ProfileFragment())
                     true
                 }
