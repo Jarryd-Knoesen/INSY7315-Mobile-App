@@ -3,5 +3,8 @@ import java.io.Serializable
 
 data class UsersModel (
     val id: String,
+    val userType: String,
+    val email: String,
+    val password: String,
     val name: String
 ) : Serializable
