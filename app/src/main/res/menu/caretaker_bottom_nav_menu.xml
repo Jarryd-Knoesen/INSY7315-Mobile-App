@@ -7,11 +7,6 @@
         android:title="Tasks" />
 
     <item
-        android:id="@+id/nav_notes"
-        android:icon="@drawable/icons8_notes_50"
-        android:title="Notes" />
-
-    <item
         android:id="@+id/nav_communication"
         android:icon="@drawable/message"
         android:title="Communication" />

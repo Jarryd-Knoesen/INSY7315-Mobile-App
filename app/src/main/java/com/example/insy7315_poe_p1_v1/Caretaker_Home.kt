@@ -46,12 +46,6 @@ class Caretaker_Home : AppCompatActivity() {
                     true
                 }
 
-                R.id.nav_notes -> {
-                    Firebase.analytics.logEvent("Notes_button_click", bundle)
-                    replaceFragment(TasksFragment())
-                    true
-                }
-
                 R.id.nav_communication -> {
                     Firebase.analytics.logEvent("Communication_button_click", bundle)
                     replaceFragment(UsersListFragment())

@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.INSY7315_POE_P1_V1" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <item name="colorPrimary">#C300FF</item>
+        <item name="colorPrimary">#0FB1C1</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="colorSecondary">#0FB1C1</item>
         <item name="colorOnSecondary">@color/white</item>
