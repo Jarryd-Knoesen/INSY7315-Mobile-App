@@ -28,7 +28,7 @@ class MessagesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.tenant_fragment_messages, container, false)
+        val view = inflater.inflate(R.layout.all_fragment_message_chat, container, false)
 
         val title = view.findViewById<TextView>(R.id.chatTitle)
         title.text = userName

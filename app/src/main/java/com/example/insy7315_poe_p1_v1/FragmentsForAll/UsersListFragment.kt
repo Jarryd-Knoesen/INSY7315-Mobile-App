@@ -19,7 +19,7 @@ class UsersListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.tenant_fragment_message_users, container, false)
+        val view = inflater.inflate(R.layout.all_fragment_message_users, container, false)
 
         recyclerView = view.findViewById(R.id.taskUsersRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())

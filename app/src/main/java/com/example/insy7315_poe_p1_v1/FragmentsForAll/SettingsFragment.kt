@@ -24,7 +24,7 @@ class SettingsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.tenant_fragment_settings, container, false)
+        val view = inflater.inflate(R.layout.all_fragment_settings, container, false)
 
         // ------------------------
         // General UI Elements

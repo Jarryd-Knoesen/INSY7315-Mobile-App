@@ -1,4 +1,6 @@
-package com.example.insy7315_poe_p1_v1.FragmentsForAll
+package com.example.insy7315_poe_p1_v1.Admin_Fragments
+
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,22 +10,21 @@ import com.example.insy7315_poe_p1_v1.R
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
-class ProfileFragment : Fragment() {
+class GenerateReportFragment : Fragment() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.all_fragment_profile, container, false)
+        val view = inflater.inflate(R.layout.admin_fragment_create_report, container, false)
 
-        val btnSettings = view.findViewById<Button>(R.id.btnSettings)
+        val btnGenerateReport = view.findViewById<Button>(R.id.btnGenerateReport)
 
-
-        btnSettings.setOnClickListener {
+        btnGenerateReport.setOnClickListener {
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, SettingsFragment())
-                .addToBackStack(null) // Lets the user press back to return here
+                .replace(R.id.fragment_container, ViewReportFragment())
+                .addToBackStack(null)
                 .commit()
 
             (requireActivity() as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
