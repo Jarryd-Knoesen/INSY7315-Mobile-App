@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
                     finish()
                 }
                 "Manager" -> {
-                    // startActivity(Intent(this, Manager_Home::class.java))
+                    startActivity(Intent(this, Manager_Home::class.java))
                     finish()
                 }
                 "Caretaker" -> {

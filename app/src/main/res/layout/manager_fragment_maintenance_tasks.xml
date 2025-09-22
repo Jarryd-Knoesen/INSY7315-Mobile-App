@@ -23,16 +23,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:text="AI Escalations"
+                android:text="@string/tasks_title"
                 android:textSize="20sp"
                 android:gravity="center"/>
 
             <TextView
-                android:id="@+id/textView50"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Tap on a column header to sort by that column"
-                android:gravity="center"/>
+            android:id="@+id/textView50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tap on a column header to sort by that column"
+            android:gravity="center"/>
 
             <EditText
                 android:id="@+id/etFilterSearch"
@@ -57,6 +57,7 @@
 
                     <!-- Table Header -->
 
+
                     <HorizontalScrollView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
@@ -71,63 +72,31 @@
                                 android:layout_height="wrap_content"
                                 android:background="#CCCCCC"
                                 android:orientation="horizontal"
-                                android:padding="5dp">
+                                android:padding="8dp">
 
                                 <TextView
-                                    android:id="@+id/header_id"
-                                    android:layout_width="75dp"
-                                    android:layout_height="30dp"
-                                    android:clickable="true"
-                                    android:focusable="true"
-                                    android:text="ID" />
+                                    android:id="@+id/unit_header"
+                                    android:layout_width="55dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/header_unit" />
 
                                 <TextView
-                                    android:id="@+id/header_date"
+                                    android:id="@+id/status_header"
                                     android:layout_width="125dp"
-                                    android:layout_height="30dp"
-                                    android:clickable="true"
-                                    android:focusable="true"
-                                    android:text="Date" />
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/table_header_status" />
 
                                 <TextView
-                                    android:id="@+id/header_source"
+                                    android:id="@+id/reported_date_header"
                                     android:layout_width="125dp"
-                                    android:layout_height="30dp"
-                                    android:clickable="true"
-                                    android:focusable="true"
-                                    android:text="Source" />
+                                    android:layout_height="wrap_content"
+                                    android:text="Reported Date" />
 
                                 <TextView
-                                    android:id="@+id/header_property"
+                                    android:id="@+id/issue_header"
                                     android:layout_width="125dp"
-                                    android:layout_height="30dp"
-                                    android:clickable="true"
-                                    android:focusable="true"
-                                    android:text="Property" />
-
-                                <TextView
-                                    android:id="@+id/header_category"
-                                    android:layout_width="125dp"
-                                    android:layout_height="30dp"
-                                    android:clickable="true"
-                                    android:focusable="true"
-                                    android:text="Category" />
-
-                                <TextView
-                                    android:id="@+id/header_status"
-                                    android:layout_width="125dp"
-                                    android:layout_height="30dp"
-                                    android:clickable="true"
-                                    android:focusable="true"
-                                    android:text="Status" />
-
-                                <TextView
-                                    android:id="@+id/header_priority"
-                                    android:layout_width="125dp"
-                                    android:layout_height="30dp"
-                                    android:clickable="true"
-                                    android:focusable="true"
-                                    android:text="Priority" />
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/table_header_issue" />
 
                             </LinearLayout>
 
@@ -142,7 +111,7 @@
 
                                     <!-- RecyclerView for rows -->
                                     <androidx.recyclerview.widget.RecyclerView
-                                        android:id="@+id/taskEscalationsRecyclerView"
+                                        android:id="@+id/taskManagerMaintenanceTasksRecyclerView"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent" />
 
