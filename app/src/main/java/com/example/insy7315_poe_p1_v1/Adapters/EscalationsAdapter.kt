@@ -10,8 +10,18 @@ import com.example.insy7315_poe_p1_v1.R
 import java.text.SimpleDateFormat
 import java.util.Locale
 
-class EscalationsAdapter (private val escalationList: List<EscalationsModel>) :
+class EscalationsAdapter (private var escalationList: List<EscalationsModel>) :
 RecyclerView.Adapter<EscalationsAdapter.EscalationViewHolder>() {
+
+    fun updateList(newList: List<EscalationsModel>){
+        escalationList  = newList.toMutableList()
+        notifyDataSetChanged()
+    }
+
+    fun updateSearchList(newList: List<EscalationsModel>) {
+        escalationList = newList
+        notifyDataSetChanged()
+    }
 
     private val dateFormat = SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault())
 

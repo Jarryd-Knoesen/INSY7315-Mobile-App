@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:text="AI Escalations"
+                android:text="Lease Overview"
                 android:textSize="20sp"
                 android:gravity="center"/>
 
@@ -32,6 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Tap on a column header to sort by that column"
+                android:textStyle="italic"
                 android:gravity="center"/>
 
             <EditText
@@ -74,12 +75,20 @@
                                 android:padding="5dp">
 
                                 <TextView
+                                    android:id="@+id/header_status"
+                                    android:layout_width="60dp"
+                                    android:layout_height="30dp"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:text="Status" />
+
+                                <TextView
                                     android:id="@+id/header_id"
                                     android:layout_width="75dp"
                                     android:layout_height="30dp"
                                     android:clickable="true"
                                     android:focusable="true"
-                                    android:text="ID" />
+                                    android:text="Unit" />
 
                                 <TextView
                                     android:id="@+id/header_date"
@@ -87,7 +96,7 @@
                                     android:layout_height="30dp"
                                     android:clickable="true"
                                     android:focusable="true"
-                                    android:text="Date" />
+                                    android:text="Tenant/s" />
 
                                 <TextView
                                     android:id="@+id/header_source"
@@ -95,7 +104,7 @@
                                     android:layout_height="30dp"
                                     android:clickable="true"
                                     android:focusable="true"
-                                    android:text="Source" />
+                                    android:text="Lease Start" />
 
                                 <TextView
                                     android:id="@+id/header_property"
@@ -103,7 +112,7 @@
                                     android:layout_height="30dp"
                                     android:clickable="true"
                                     android:focusable="true"
-                                    android:text="Property" />
+                                    android:text="Lease End" />
 
                                 <TextView
                                     android:id="@+id/header_category"
@@ -111,23 +120,7 @@
                                     android:layout_height="30dp"
                                     android:clickable="true"
                                     android:focusable="true"
-                                    android:text="Category" />
-
-                                <TextView
-                                    android:id="@+id/header_status"
-                                    android:layout_width="125dp"
-                                    android:layout_height="30dp"
-                                    android:clickable="true"
-                                    android:focusable="true"
-                                    android:text="Status" />
-
-                                <TextView
-                                    android:id="@+id/header_priority"
-                                    android:layout_width="125dp"
-                                    android:layout_height="30dp"
-                                    android:clickable="true"
-                                    android:focusable="true"
-                                    android:text="Priority" />
+                                    android:text="Rent Amount" />
 
                             </LinearLayout>
 
@@ -142,7 +135,7 @@
 
                                     <!-- RecyclerView for rows -->
                                     <androidx.recyclerview.widget.RecyclerView
-                                        android:id="@+id/taskEscalationsRecyclerView"
+                                        android:id="@+id/taskLeaseOverviewRecyclerView"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent" />
 
