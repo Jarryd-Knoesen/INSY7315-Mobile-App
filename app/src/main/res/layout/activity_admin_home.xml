@@ -29,7 +29,7 @@
         android:layout_width="250dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#AA000000"
+        android:background="@color/drawerBackground"
         android:padding="16dp"
         android:layout_gravity="start">
 
@@ -37,8 +37,8 @@
             android:id="@+id/smAiEscalations"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="AI Escalations"
-            android:textColor="@android:color/white"
+            android:text="@string/smAiEscalations"
+            android:textColor="@color/drawerText"
             android:textSize="18sp"
             android:layout_marginTop="50dp"
             android:padding="8dp"/>
@@ -47,8 +47,8 @@
             android:id="@+id/smCommunication"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Communication"
-            android:textColor="@android:color/white"
+            android:text="@string/smCommunication"
+            android:textColor="@color/drawerText"
             android:textSize="18sp"
             android:layout_marginTop="50dp"
             android:padding="8dp"/>
@@ -57,8 +57,8 @@
             android:id="@+id/smDashboard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dashboard"
-            android:textColor="@android:color/white"
+            android:text="@string/smDashboard"
+            android:textColor="@color/drawerText"
             android:textSize="18sp"
             android:layout_marginTop="50dp"
             android:padding="8dp"/>
@@ -67,8 +67,8 @@
             android:id="@+id/smReports"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Generate Report"
-            android:textColor="@android:color/white"
+            android:text="@string/smReports"
+            android:textColor="@color/drawerText"
             android:textSize="18sp"
             android:layout_marginTop="50dp"
             android:padding="8dp"/>
@@ -77,8 +77,8 @@
             android:id="@+id/smManageUsers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Manage Users"
-            android:textColor="@android:color/white"
+            android:text="@string/smManageUsers"
+            android:textColor="@color/drawerText"
             android:textSize="18sp"
             android:layout_marginTop="50dp"
             android:padding="8dp"/>
@@ -87,8 +87,8 @@
             android:id="@+id/smProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Profile"
-            android:textColor="@android:color/white"
+            android:text="@string/smProfile"
+            android:textColor="@color/drawerText"
             android:textSize="18sp"
             android:layout_marginTop="50dp"
             android:padding="8dp"/>

@@ -10,30 +10,36 @@
     <TextView
         android:id="@+id/status"
         android:layout_width="60dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="?attr/android:textColor"/>
 
     <TextView
         android:id="@+id/unit"
         android:layout_width="75dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="?attr/android:textColor"/>
 
     <TextView
         android:id="@+id/tenant"
         android:layout_width="125dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="?attr/android:textColor"/>
 
     <TextView
         android:id="@+id/leaseStart"
         android:layout_width="125dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="?attr/android:textColor"/>
 
     <TextView
         android:id="@+id/leaseEnd"
         android:layout_width="125dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="?attr/android:textColor"/>
 
     <TextView
         android:id="@+id/rentAmount"
         android:layout_width="125dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="?attr/android:textColor"/>
 </LinearLayout>

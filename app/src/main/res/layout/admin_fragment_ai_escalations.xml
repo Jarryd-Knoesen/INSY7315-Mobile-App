@@ -2,20 +2,23 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="?attr/colorAccent">
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="8dp">
 
             <TextView
                 android:id="@+id/textView22"
@@ -23,16 +26,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:text="AI Escalations"
+                android:text="@string/title_ai_escalations"
                 android:textSize="20sp"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textColor="?android:textColor" />
 
             <TextView
                 android:id="@+id/textView50"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tap on a column header to sort by that column"
-                android:gravity="center"/>
+                android:text="@string/text_column_filter_search"
+                android:gravity="center"
+                android:textColor="?android:textColor" />
 
             <EditText
                 android:id="@+id/etFilterSearch"
@@ -41,7 +46,10 @@
                 android:layout_margin="10dp"
                 android:ems="10"
                 android:inputType="text"
-                android:hint="Type here to filter and search..." />
+                android:hint="@string/text_filter_search"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textColor="?android:textColor"
+                android:textColorHint="?attr/colorSecondary" />
 
             <LinearLayout
                 android:id="@+id/tableContainer"
@@ -55,8 +63,6 @@
                     android:layout_gravity="center_horizontal"
                     android:orientation="vertical">
 
-                    <!-- Table Header -->
-
                     <HorizontalScrollView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
@@ -64,12 +70,12 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:orientation="vertical" >
+                            android:orientation="vertical">
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:background="#CCCCCC"
+                                android:background="?attr/colorSecondary"
                                 android:orientation="horizontal"
                                 android:padding="5dp">
 
@@ -79,7 +85,8 @@
                                     android:layout_height="30dp"
                                     android:clickable="true"
                                     android:focusable="true"
-                                    android:text="ID" />
+                                    android:text="@string/text_id"
+                                    android:textColor="?android:textColor" />
 
                                 <TextView
                                     android:id="@+id/header_date"
@@ -87,7 +94,8 @@
                                     android:layout_height="30dp"
                                     android:clickable="true"
                                     android:focusable="true"
-                                    android:text="Date" />
+                                    android:text="@string/text_date"
+                                    android:textColor="?android:textColor" />
 
                                 <TextView
                                     android:id="@+id/header_source"
@@ -95,7 +103,8 @@
                                     android:layout_height="30dp"
                                     android:clickable="true"
                                     android:focusable="true"
-                                    android:text="Source" />
+                                    android:text="@string/text_source"
+                                    android:textColor="?android:textColor" />
 
                                 <TextView
                                     android:id="@+id/header_property"
@@ -103,7 +112,8 @@
                                     android:layout_height="30dp"
                                     android:clickable="true"
                                     android:focusable="true"
-                                    android:text="Property" />
+                                    android:text="@string/text_property"
+                                    android:textColor="?android:textColor" />
 
                                 <TextView
                                     android:id="@+id/header_category"
@@ -111,7 +121,8 @@
                                     android:layout_height="30dp"
                                     android:clickable="true"
                                     android:focusable="true"
-                                    android:text="Category" />
+                                    android:text="@string/text_category"
+                                    android:textColor="?android:textColor" />
 
                                 <TextView
                                     android:id="@+id/header_status"
@@ -119,7 +130,8 @@
                                     android:layout_height="30dp"
                                     android:clickable="true"
                                     android:focusable="true"
-                                    android:text="Status" />
+                                    android:text="@string/text_status"
+                                    android:textColor="?android:textColor" />
 
                                 <TextView
                                     android:id="@+id/header_priority"
@@ -127,8 +139,8 @@
                                     android:layout_height="30dp"
                                     android:clickable="true"
                                     android:focusable="true"
-                                    android:text="Priority" />
-
+                                    android:text="@string/text_priority"
+                                    android:textColor="?android:textColor" />
                             </LinearLayout>
 
                             <ScrollView
@@ -138,9 +150,8 @@
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:orientation="vertical" >
+                                    android:orientation="vertical">
 
-                                    <!-- RecyclerView for rows -->
                                     <androidx.recyclerview.widget.RecyclerView
                                         android:id="@+id/taskEscalationsRecyclerView"
                                         android:layout_width="wrap_content"
@@ -154,5 +165,4 @@
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

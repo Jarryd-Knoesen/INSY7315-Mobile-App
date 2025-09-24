@@ -129,4 +129,74 @@
     <string name="tasks_title">Tasks</string>
     <string name="header_fix_date">Fix Date</string>
     <string name="header_unit">Unit</string>
+
+    <!-- Property Listing -->
+    <string name="header_property_overview">Property Overview</string>
+    <string name="text_filter_search">Type here to filter and search…</string>
+
+    <!-- Admin Home -->
+    <string name="smAiEscalations">AI Escalations</string>
+    <string name="smCommunication">Communication</string>
+    <string name="smDashboard">Dashboard</string>
+    <string name="smReports">Generate Report</string>
+    <string name="smManageUsers">Manage Users</string>
+    <string name="smProfile">Profile</string>
+
+    <!-- Manager Home -->
+    <string name="smLeaseOverview">AI Escalations</string>
+    <string name="smMainDashboard">Main Dashboard</string>
+    <string name="smMaintenanceDashboard">Maintenance Dashboard</string>
+    <string name="smPropertyListings">Property Listings</string>
+
+    <!-- Admin Create Report -->
+    <string name="text_generate_report">Generate Report</string>
+    <string name="text_month_select">Select the month and year for the report:</string>
+    <string name="text_year">Year</string>
+    <string name="text_month">Month</string>
+    <string name="btn_generate_report">Generate Report</string>
+
+    <!-- All Profile -->
+    <string name="btn_property_listings">Property Listings</string>
+
+    <!-- Manager Dashboard -->
+    <string name="title_dashboard">Dashboard</string>
+    <string name="text_menu_swipe">Swipe from the left to show the menu</string>
+    <string name="text_tenants">Tenants:</string>
+    <string name="text_properties">Properties:</string>
+    <string name="text_occupancy">Occupancy:</string>
+    <string name="text_leases_expiring_soon">Leases Expiring Soon:</string>
+    <string name="text_rent_collected">Rent Collected:</string>
+    <string name="text_outstanding_rent">Outstanding Rent:</string>
+    <string name="text_active_maintenance_requests">Active Maintenance Requests:</string>
+
+    <!-- Manager Lease Overview -->
+    <string name="title_lease_overview">Lease Overview</string>
+    <string name="text_column_filter_search">Tap on a column header to sort by that column</string>
+    <string name="header_tenant">Tenant</string>
+    <string name="header_lease_start">Lease Start</string>
+    <string name="header_lease_end">Lease End</string>
+    <string name="header_rent_amount">Rent Amount</string>
+
+    <!-- Manager Maintenance Tasks -->
+    <string name="header_reported_date">Reported Date</string>
+
+    <!-- Admin Manage Users -->
+    <string name="header_manager_users">Manage Users</string>
+    <string name="text_add_user">Add User</string>
+    <string name="text_search">Search…</string>
+    <string name="header_name">Name</string>
+    <string name="header_email">Email</string>
+    <string name="header_role">Role</string>
+    <string name="header_located">Located</string>
+    <string name="header_status">Status</string>
+
+    <!-- Admin AI Escalations -->
+    <string name="title_ai_escalations">AI Escalations</string>
+    <string name="text_id">ID</string>
+    <string name="text_date">Date</string>
+    <string name="text_source">Source</string>
+    <string name="text_property">Property</string>
+    <string name="text_category">Category</string>
+    <string name="text_status">Status</string>
+    <string name="text_priority">Priority</string>
 </resources>

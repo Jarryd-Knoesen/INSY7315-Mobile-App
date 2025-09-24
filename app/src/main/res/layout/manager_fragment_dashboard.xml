@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,34 +16,40 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:padding="10dp">
 
             <TextView
                 android:id="@+id/textView44"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Dashboard"
+                android:text="@string/title_dashboard"
                 android:layout_marginTop="15dp"
                 android:textStyle="bold"
                 android:textSize="22sp"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textColor="?attr/colorPrimary" />
 
             <TextView
                 android:id="@+id/textView49"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Swipe from the left to show the menu"
+                android:text="@string/text_menu_swipe"
                 android:layout_marginTop="5dp"
                 android:textStyle="italic"
                 android:textSize="12sp"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textColor="?attr/colorSecondary" />
 
+            <!-- Card Template -->
             <androidx.cardview.widget.CardView
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:layout_gravity="center"
-                app:cardElevation="5dp">
+                app:cardBackgroundColor="?attr/colorAccent"
+                app:cardElevation="5dp"
+                android:foreground="?attr/selectableItemBackground">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -54,17 +61,18 @@
                         android:id="@+id/textView32"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Tenants:"
-                        android:layout_gravity="center"/>
+                        android:text="@string/text_tenants"
+                        android:layout_gravity="center"
+                        android:textColor="?attr/android:textColor" />
 
                     <TextView
                         android:id="@+id/textView33"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="22"
-                        android:layout_gravity="center"/>
+                        android:layout_gravity="center"
+                        android:textColor="?attr/android:textColor" />
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -72,6 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_gravity="center"
+                app:cardBackgroundColor="?attr/colorAccent"
                 app:cardElevation="5dp">
 
                 <LinearLayout
@@ -84,17 +93,18 @@
                         android:id="@+id/textView36"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Occupancy:"
-                        android:layout_gravity="center"/>
+                        android:text="@string/text_occupancy"
+                        android:layout_gravity="center"
+                        android:textColor="?attr/android:textColor" />
 
                     <TextView
                         android:id="@+id/textView37"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="20 / 30"
-                        android:layout_gravity="center"/>
+                        android:layout_gravity="center"
+                        android:textColor="?attr/android:textColor"  />
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -102,6 +112,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:layout_gravity="center"
+                app:cardBackgroundColor="?attr/colorAccent"
                 app:cardElevation="5dp">
 
                 <LinearLayout
@@ -114,15 +125,17 @@
                         android:id="@+id/textView0"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Leases Expiring Soon:"
-                        android:layout_gravity="center"/>
+                        android:text="@string/text_leases_expiring_soon"
+                        android:layout_gravity="center"
+                        android:textColor="?attr/android:textColor" />
 
                     <TextView
                         android:id="@+id/textView01"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="4"
-                        android:layout_gravity="center"/>
+                        android:layout_gravity="center"
+                        android:textColor="?attr/android:textColor" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -131,6 +144,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_gravity="center"
+                app:cardBackgroundColor="?attr/colorAccent"
                 app:cardElevation="5dp">
 
                 <LinearLayout
@@ -143,17 +157,18 @@
                         android:id="@+id/textView38"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Rent Collected:"
-                        android:layout_gravity="center"/>
+                        android:text="@string/text_rent_collected"
+                        android:layout_gravity="center"
+                        android:textColor="?attr/android:textColor" />
 
                     <TextView
                         android:id="@+id/textView39"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="R 45,000"
-                        android:layout_gravity="center"/>
+                        android:layout_gravity="center"
+                        android:textColor="?attr/android:textColor"  />
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -161,6 +176,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_gravity="center"
+                app:cardBackgroundColor="?attr/colorAccent"
                 app:cardElevation="5dp">
 
                 <LinearLayout
@@ -173,17 +189,18 @@
                         android:id="@+id/textView40"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Outstanding Rent:"
-                        android:layout_gravity="center"/>
+                        android:text="@string/text_outstanding_rent"
+                        android:layout_gravity="center"
+                        android:textColor="?attr/android:textColor" />
 
                     <TextView
                         android:id="@+id/textView41"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="R 12,000"
-                        android:layout_gravity="center"/>
+                        android:layout_gravity="center"
+                        android:textColor="?attr/android:textColor" />
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -192,6 +209,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:layout_gravity="center"
+                app:cardBackgroundColor="?attr/colorAccent"
                 app:cardElevation="5dp">
 
                 <LinearLayout
@@ -204,17 +222,18 @@
                         android:id="@+id/textView42"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Active Maintenance Requests:"
-                        android:layout_gravity="center"/>
+                        android:text="@string/text_active_maintenance_requests"
+                        android:layout_gravity="center"
+                        android:textColor="?attr/android:textColor" />
 
                     <TextView
                         android:id="@+id/textView43"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="5"
-                        android:layout_gravity="center"/>
+                        android:layout_gravity="center"
+                        android:textColor="?attr/android:textColor" />
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
         </LinearLayout>
     </ScrollView>

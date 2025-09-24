@@ -33,12 +33,6 @@ class Tenant_Home : AppCompatActivity() {
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
-//        val navHome = findViewById<LinearLayout>(R.id.nav_home)
-//        val navMaintenance = findViewById<LinearLayout>(R.id.nav_maintenance)
-//        val navMessages = findViewById<LinearLayout>(R.id.nav_messages)
-//        val navProfile = findViewById<LinearLayout>(R.id.nav_profile)
-//        val navPayments = findViewById<LinearLayout>(R.id.nav_payments)
-
 
         // Set default fragment
         if (savedInstanceState == null) {
@@ -46,27 +40,6 @@ class Tenant_Home : AppCompatActivity() {
                 .replace(R.id.fragment_container, HomeFragment())
                 .commit()
         }
-
-        // Manual nav
-//        navHome.setOnClickListener {
-//            replaceFragment(HomeFragment())
-//        }
-//
-//        navMaintenance.setOnClickListener {
-//            replaceFragment(MaintenanceHistoryFragment())
-//        }
-//
-//        navMessages.setOnClickListener {
-//            replaceFragment(UsersListFragment())
-//        }
-//
-//        navProfile.setOnClickListener {
-//            replaceFragment(ProfileFragment())
-//        }
-//
-//        navPayments.setOnClickListener {
-//            replaceFragment(PaymentHistoryFragment())
-//        }
 
         // System Nav
         bottomNav.setOnItemSelectedListener { item ->
