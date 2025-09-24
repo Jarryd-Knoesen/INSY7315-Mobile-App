@@ -10,35 +10,42 @@
     <TextView
         android:id="@+id/escalationID"
         android:layout_width="75dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="?attr/android:textColor"/>
 
     <TextView
         android:id="@+id/date_time"
         android:layout_width="125dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="?attr/android:textColor"/>
 
     <TextView
         android:id="@+id/source"
         android:layout_width="125dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="?attr/android:textColor"/>
 
     <TextView
         android:id="@+id/property"
         android:layout_width="125dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="?attr/android:textColor"/>
 
     <TextView
         android:id="@+id/category"
         android:layout_width="125dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="?attr/android:textColor"/>
 
     <TextView
         android:id="@+id/status"
         android:layout_width="125dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="?attr/android:textColor"/>
 
     <TextView
         android:id="@+id/priority"
         android:layout_width="125dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="?attr/android:textColor"/>
 </LinearLayout>

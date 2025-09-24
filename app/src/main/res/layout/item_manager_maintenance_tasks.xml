@@ -10,20 +10,24 @@
     <TextView
         android:id="@+id/unit"
         android:layout_width="55dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="?attr/android:textColor"/>
 
     <TextView
         android:id="@+id/status"
         android:layout_width="125dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="?attr/android:textColor"/>
 
     <TextView
         android:id="@+id/reported_date"
         android:layout_width="125dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="?attr/android:textColor"/>
 
     <TextView
         android:id="@+id/issue"
         android:layout_width="125dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="?attr/android:textColor"/>
 </LinearLayout>

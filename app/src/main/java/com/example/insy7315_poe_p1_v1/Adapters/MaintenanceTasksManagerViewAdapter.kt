@@ -23,6 +23,10 @@ class MaintenanceTasksManagerViewAdapter (private var maintenanceTasks: List<Mai
         notifyDataSetChanged()
     }
 
+    fun getItems(): List<MaintenanceRequestModel> {
+        return maintenanceTasks
+    }
+
     private val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
 
     class ManagerMaintenanceTasksViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

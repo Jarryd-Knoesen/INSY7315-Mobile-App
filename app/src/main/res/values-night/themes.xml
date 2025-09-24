@@ -1,10 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Dark theme colors -->
+    <color name="drawerBackground">#AA000000</color>
+    <color name="drawerText">#FFFFFF</color>
+
     <!-- Base application theme. -->
     <style name="Base.Theme.INSY7315_POE_P1_V1" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-         <item name="colorPrimary">@color/black</item>
-         <item name="colorOnPrimary">@color/white</item>
-         <item name="colorSecondary">@color/black</item>
-         <item name="colorOnSecondary">@color/white</item>
+        <item name="colorPrimary">#FF9D00</item>
+        <item name="colorSecondary">#E6B566</item>
+        <item name="colorAccent">#4A3B28</item>
+        <item name="colorOnBackground">#000000</item>
+        <item name="android:textColor">#FFFFFF</item>
     </style>
+
+    <style name="Theme.INSY7315_POE_P1_V1" parent="Base.Theme.INSY7315_POE_P1_V1" />
 </resources>

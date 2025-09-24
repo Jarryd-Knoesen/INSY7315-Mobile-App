@@ -10,146 +10,164 @@
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:backgroundTint="#E6B566"
+        android:backgroundTint="?attr/colorSecondary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-            <androidx.cardview.widget.CardView
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginVertical="25dp"
+            android:backgroundTint="?attr/colorOnBackground"
+            app:cardCornerRadius="15dp">
+
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginVertical="25dp"
-                android:backgroundTint="#ffffff"
-                app:cardCornerRadius="15dp">
+                android:layout_height="match_parent">
 
-
-                <ScrollView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:padding="25dp">
 
-                    <LinearLayout
+                    <TextView
+                        android:id="@+id/textView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="center_horizontal"
-                        android:padding="25dp">
+                        android:text="@string/signup_title"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="30sp"
+                        android:textColor="?attr/android:textColor" />
 
-                        <TextView
-                            android:id="@+id/textView"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/signup_title"
-                            android:gravity="center"
-                            android:textStyle="bold"
-                            android:textSize="30dp"/>
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        app:srcCompat="@drawable/screenshot_2025_08_08_084814" />
 
-                        <ImageView
-                            android:id="@+id/imageView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="100dp"
-                            app:srcCompat="@drawable/screenshot_2025_08_08_084814" />
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_first_name"
+                        android:gravity="bottom"
+                        android:textColor="?attr/android:textColor" />
 
-                        <TextView
-                            android:id="@+id/textView2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/label_first_name"
-                            android:gravity="bottom"/>
+                    <EditText
+                        android:id="@+id/etFirstName"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:ems="10"
+                        android:hint="@string/hint_first_name"
+                        android:inputType="textPersonName"
+                        android:textColor="?attr/android:textColor"
+                        android:textColorHint="?attr/colorOnBackground" />
 
-                        <EditText
-                            android:id="@+id/etFirstName"
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:ems="10"
-                            android:hint="@string/hint_first_name"
-                            android:inputType="textEmailAddress" />
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_surname"
+                        android:gravity="bottom"
+                        android:textColor="?attr/android:textColor" />
 
-                        <TextView
-                            android:id="@+id/textView6"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/label_surname"
-                            android:gravity="bottom"/>
+                    <EditText
+                        android:id="@+id/etSurname"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:ems="10"
+                        android:hint="@string/hint_surname"
+                        android:inputType="textPersonName"
+                        android:textColor="?attr/android:textColor"
+                        android:textColorHint="?attr/colorOnBackground" />
 
-                        <EditText
-                            android:id="@+id/etSurname"
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:ems="10"
-                            android:hint="@string/hint_surname"
-                            android:inputType="textEmailAddress" />
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_phone_number"
+                        android:gravity="bottom"
+                        android:textColor="?attr/android:textColor" />
 
-                        <TextView
-                            android:id="@+id/textView7"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/label_phone_number"
-                            android:gravity="bottom"/>
+                    <EditText
+                        android:id="@+id/etPhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:ems="10"
+                        android:hint="@string/hint_phone_number"
+                        android:inputType="phone"
+                        android:textColor="?attr/android:textColor"
+                        android:textColorHint="?attr/colorOnBackground" />
 
-                        <EditText
-                            android:id="@+id/etPhoneNumber"
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:ems="10"
-                            android:hint="@string/hint_phone_number" />
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_email"
+                        android:gravity="bottom"
+                        android:textColor="?attr/android:textColor" />
 
-                        <TextView
-                            android:id="@+id/textView8"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/label_email"
-                            android:gravity="bottom"/>
+                    <EditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:ems="10"
+                        android:hint="@string/hint_email"
+                        android:inputType="textEmailAddress"
+                        android:textColor="?attr/android:textColor"
+                        android:textColorHint="?attr/colorOnBackground" />
 
-                        <EditText
-                            android:id="@+id/etEmail"
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:ems="10"
-                            android:hint="@string/hint_email"
-                            android:inputType="textEmailAddress" />
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_password"
+                        android:gravity="bottom"
+                        android:textColor="?attr/android:textColor" />
 
-                        <TextView
-                            android:id="@+id/textView3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/label_password"
-                            android:gravity="bottom"/>
+                    <EditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:ems="10"
+                        android:hint="@string/hint_password"
+                        android:inputType="textPassword"
+                        android:textColor="?attr/android:textColor"
+                        android:textColorHint="?attr/colorOnBackground" />
 
-                        <EditText
-                            android:id="@+id/etPassword"
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:ems="10"
-                            android:hint="@string/hint_password"
-                            android:inputType="textPassword" />
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/label_already_have_account"
+                        android:layout_marginTop="20dp"
+                        android:textColor="?attr/android:textColor" />
 
-                        <TextView
-                            android:id="@+id/textView4"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="@string/label_already_have_account"
-                            android:layout_marginTop="20dp"/>
+                    <TextView
+                        android:id="@+id/tvLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/login_title"
+                        android:gravity="center"
+                        android:textColor="?attr/colorPrimary" />
 
-                        <TextView
-                            android:id="@+id/tvLogin"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/login_title"
-                            android:gravity="center"
-                            android:textColor="#0473FF" />
-
-                        <Button
-                            android:id="@+id/btnSignup"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
-                            android:backgroundTint="#FF9D00"
-                            android:text="@string/signup_title" />
-                    </LinearLayout>
-                </ScrollView>
-            </androidx.cardview.widget.CardView>
+                    <Button
+                        android:id="@+id/btnSignup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:backgroundTint="?attr/colorPrimary"
+                        android:text="@string/signup_title"
+                        android:textColor="?attr/colorOnBackground" />
+                </LinearLayout>
+            </ScrollView>
+        </androidx.cardview.widget.CardView>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

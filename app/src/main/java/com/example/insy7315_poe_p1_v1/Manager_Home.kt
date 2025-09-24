@@ -1,5 +1,6 @@
 package com.example.insy7315_poe_p1_v1
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -10,14 +11,17 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.example.insy7315_poe_p1_v1.Admin_Fragments.EscalationsFragment
+import com.example.insy7315_poe_p1_v1.FragmentsForAll.ProfileFragment
 import com.example.insy7315_poe_p1_v1.FragmentsForAll.UsersListFragment
 import com.example.insy7315_poe_p1_v1.Manager_Fregments.DashboardFragment
 import com.example.insy7315_poe_p1_v1.Manager_Fregments.LeaseOverviewFragment
 import com.example.insy7315_poe_p1_v1.Manager_Fregments.MaintenanceOverview
+import com.example.insy7315_poe_p1_v1.Manager_Fregments.PropertyListing
 
 class Manager_Home : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -30,6 +34,7 @@ class Manager_Home : AppCompatActivity() {
         val smMainDashboard = findViewById<TextView>(R.id.smMainDashboard)
         val smLeaseOverview = findViewById<TextView>(R.id.smLeaseOverview)
         val smMaintenanceDashboard = findViewById<TextView>(R.id.smMaintenanceDashboard)
+        val smProfile = findViewById<TextView>(R.id.smProfile)
         val smPropertyListings = findViewById<TextView>(R.id.smPropertyListings)
 
 
@@ -64,8 +69,13 @@ class Manager_Home : AppCompatActivity() {
             drawerLayout.closeDrawer(GravityCompat.START)
         }
 
+        smProfile.setOnClickListener {
+            replaceFragment(ProfileFragment())
+            drawerLayout.closeDrawer(GravityCompat.START)
+        }
+
         smPropertyListings.setOnClickListener {
-            //replaceFragment()
+            replaceFragment(PropertyListing())
             drawerLayout.closeDrawer(GravityCompat.START)
         }
 

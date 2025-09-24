@@ -44,11 +44,6 @@ class Admin_Home : AppCompatActivity() {
             insets
         }
 
-        // Open drawer on button click
-//        btnMenu.setOnClickListener {
-//            drawerLayout.openDrawer(GravityCompat.START)
-//        }
-
         // Drawer menu item click listeners
         smAiEscalations.setOnClickListener {
             replaceFragment(EscalationsFragment())

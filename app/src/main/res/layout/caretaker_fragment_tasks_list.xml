@@ -2,20 +2,24 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="?attr/colorAccent">
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardElevation="4dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="8dp">
 
             <TextView
                 android:id="@+id/textView22"
@@ -25,7 +29,8 @@
                 android:layout_marginBottom="5dp"
                 android:text="@string/tasks_title"
                 android:textSize="20sp"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:id="@+id/tableContainer"
@@ -39,9 +44,6 @@
                     android:layout_gravity="center_horizontal"
                     android:orientation="vertical">
 
-                    <!-- Table Header -->
-
-
                     <HorizontalScrollView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
@@ -49,34 +51,43 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:orientation="vertical" >
+                            android:orientation="vertical">
 
+                            <!-- Table Header -->
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:background="#CCCCCC"
+                                android:background="?attr/colorSecondary"
                                 android:orientation="horizontal"
                                 android:padding="8dp">
 
                                 <TextView
                                     android:layout_width="55dp"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/header_unit" />
+                                    android:text="@string/header_unit"
+                                    android:textColor="?attr/android:textColor"
+                                    android:textStyle="bold" />
 
                                 <TextView
                                     android:layout_width="125dp"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/table_header_status" />
+                                    android:text="@string/table_header_status"
+                                    android:textColor="?attr/android:textColor"
+                                    android:textStyle="bold" />
 
                                 <TextView
                                     android:layout_width="125dp"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/header_fix_date" />
+                                    android:text="@string/header_fix_date"
+                                    android:textColor="?attr/android:textColor"
+                                    android:textStyle="bold" />
 
                                 <TextView
                                     android:layout_width="125dp"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/table_header_issue" />
+                                    android:text="@string/table_header_issue"
+                                    android:textColor="?attr/android:textColor"
+                                    android:textStyle="bold" />
 
                             </LinearLayout>
 
@@ -87,14 +98,14 @@
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:orientation="vertical" >
+                                    android:orientation="vertical">
 
                                     <!-- RecyclerView for rows -->
                                     <androidx.recyclerview.widget.RecyclerView
                                         android:id="@+id/taskCaretakerTasksRecyclerView"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="match_parent" />
-
+                                        android:layout_height="match_parent"
+                                        android:background="?attr/colorOnBackground" />
                                 </LinearLayout>
                             </ScrollView>
                         </LinearLayout>

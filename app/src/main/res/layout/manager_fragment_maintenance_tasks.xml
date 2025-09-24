@@ -2,20 +2,23 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="?attr/colorAccent">
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="12dp">
 
             <TextView
                 android:id="@+id/textView22"
@@ -25,14 +28,16 @@
                 android:layout_marginBottom="5dp"
                 android:text="@string/tasks_title"
                 android:textSize="20sp"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textColor="?attr/colorPrimary"/>
 
             <TextView
-            android:id="@+id/textView50"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tap on a column header to sort by that column"
-            android:gravity="center"/>
+                android:id="@+id/textView50"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_column_filter_search"
+                android:gravity="center"
+                android:textColor="?attr/colorSecondary"/>
 
             <EditText
                 android:id="@+id/etFilterSearch"
@@ -41,7 +46,10 @@
                 android:layout_margin="10dp"
                 android:ems="10"
                 android:inputType="text"
-                android:hint="Type here to filter and search..." />
+                android:hint="@string/text_filter_search"
+                android:textColor="?attr/colorOnBackground"
+                android:textColorHint="?attr/colorSecondary"
+                android:backgroundTint="?attr/colorSecondary"/>
 
             <LinearLayout
                 android:id="@+id/tableContainer"
@@ -56,21 +64,20 @@
                     android:orientation="vertical">
 
                     <!-- Table Header -->
-
-
                     <HorizontalScrollView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:scrollbars="none">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:orientation="vertical" >
+                            android:orientation="vertical">
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:background="#CCCCCC"
+                                android:background="?attr/colorSecondary"
                                 android:orientation="horizontal"
                                 android:padding="8dp">
 
@@ -78,26 +85,33 @@
                                     android:id="@+id/unit_header"
                                     android:layout_width="55dp"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/header_unit" />
+                                    android:text="@string/header_unit"
+                                    android:textStyle="bold"
+                                    android:textColor="?attr/colorOnBackground"/>
 
                                 <TextView
                                     android:id="@+id/status_header"
                                     android:layout_width="125dp"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/table_header_status" />
+                                    android:text="@string/table_header_status"
+                                    android:textStyle="bold"
+                                    android:textColor="?attr/colorOnBackground"/>
 
                                 <TextView
                                     android:id="@+id/reported_date_header"
                                     android:layout_width="125dp"
                                     android:layout_height="wrap_content"
-                                    android:text="Reported Date" />
+                                    android:text="@string/header_reported_date"
+                                    android:textStyle="bold"
+                                    android:textColor="?attr/colorOnBackground"/>
 
                                 <TextView
                                     android:id="@+id/issue_header"
                                     android:layout_width="125dp"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/table_header_issue" />
-
+                                    android:text="@string/table_header_issue"
+                                    android:textStyle="bold"
+                                    android:textColor="?attr/colorOnBackground"/>
                             </LinearLayout>
 
                             <ScrollView
@@ -107,14 +121,14 @@
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:orientation="vertical" >
+                                    android:orientation="vertical">
 
                                     <!-- RecyclerView for rows -->
                                     <androidx.recyclerview.widget.RecyclerView
                                         android:id="@+id/taskManagerMaintenanceTasksRecyclerView"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="match_parent" />
-
+                                        android:layout_height="match_parent"
+                                        android:scrollbars="vertical"/>
                                 </LinearLayout>
                             </ScrollView>
                         </LinearLayout>
@@ -123,5 +137,4 @@
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
