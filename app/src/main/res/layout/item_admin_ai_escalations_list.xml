@@ -20,19 +20,19 @@
         android:textColor="?attr/android:textColor"/>
 
     <TextView
-        android:id="@+id/source"
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:textColor="?attr/android:textColor"/>
-
-    <TextView
-        android:id="@+id/property"
+        android:id="@+id/person"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:textColor="?attr/android:textColor"/>
 
     <TextView
         android:id="@+id/category"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/android:textColor"/>
+
+    <TextView
+        android:id="@+id/issue"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:textColor="?attr/android:textColor"/>

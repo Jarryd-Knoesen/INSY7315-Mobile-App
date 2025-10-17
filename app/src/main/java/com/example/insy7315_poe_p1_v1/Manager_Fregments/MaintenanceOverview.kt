@@ -14,7 +14,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.insy7315_poe_p1_v1.Adapters.MaintenanceTasksManagerViewAdapter
 import com.example.insy7315_poe_p1_v1.Models.MaintenanceRequestModel
 import com.example.insy7315_poe_p1_v1.Models.MaintenanceRequestRepository
-
+// maintenanceRequestController:
+// There is a function to get the requests based on user role
 class MaintenanceOverview : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: MaintenanceTasksManagerViewAdapter

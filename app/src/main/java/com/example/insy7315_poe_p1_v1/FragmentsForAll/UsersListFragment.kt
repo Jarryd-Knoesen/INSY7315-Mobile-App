@@ -11,6 +11,10 @@ import com.example.insy7315_poe_p1_v1.Adapters.UsersAdapter
 import com.example.insy7315_poe_p1_v1.Models.UsersRepository
 import com.example.insy7315_poe_p1_v1.R
 
+// MessagesController
+// There is a function
+// Get users; for getting all the users based on location
+// admins will get everyone regardless of location
 class UsersListFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: UsersAdapter

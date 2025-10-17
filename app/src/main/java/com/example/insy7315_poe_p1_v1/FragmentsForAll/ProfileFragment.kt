@@ -8,6 +8,11 @@ import com.example.insy7315_poe_p1_v1.R
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
+// ProfileController
+// There is a function to get the users info
+// Data needed:
+// uid
+
 class ProfileFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,

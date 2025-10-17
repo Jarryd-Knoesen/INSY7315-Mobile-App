@@ -14,6 +14,11 @@ import com.example.insy7315_poe_p1_v1.Models.UsersModel
 import com.example.insy7315_poe_p1_v1.Models.UsersRepository
 import com.example.insy7315_poe_p1_v1.R
 
+// UsersController
+// There is a function to get all the users to be displayed
+// the admin is removed from the list of users
+// Data needed:
+// uid
 class ManageUsersFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: ManageUsersAdapter

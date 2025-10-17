@@ -10,6 +10,13 @@ import com.example.insy7315_poe_p1_v1.R
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
+// ReportController
+// There is a function to get the necessary data for the report
+// will display it on the viewReportFragment fragment
+// Data needed:
+// uid
+
+// remove the data selection for now !!!!!!!!!!
 class GenerateReportFragment : Fragment() {
     @SuppressLint("MissingInflatedId")
     override fun onCreateView(

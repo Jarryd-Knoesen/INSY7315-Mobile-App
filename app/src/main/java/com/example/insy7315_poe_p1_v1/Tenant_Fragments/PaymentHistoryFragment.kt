@@ -16,6 +16,10 @@ import com.example.insy7315_poe_p1_v1.Models.MaintenanceRequestModel
 import com.example.insy7315_poe_p1_v1.Models.PaymentModel
 import com.example.insy7315_poe_p1_v1.Models.PaymentRepository
 
+// InvoicesController
+// There is a function to get the invoices linked to the user
+// Data needed:
+// uid
 class PaymentHistoryFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: PaymentsAdapter
