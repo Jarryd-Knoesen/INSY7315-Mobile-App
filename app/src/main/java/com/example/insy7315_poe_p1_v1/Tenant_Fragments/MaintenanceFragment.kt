@@ -12,6 +12,10 @@ import com.example.insy7315_poe_p1_v1.Adapters.MaintenanceRequestAdapter
 import com.example.insy7315_poe_p1_v1.Models.MaintenanceRequestModel
 import com.example.insy7315_poe_p1_v1.Models.MaintenanceRequestRepository
 
+// maintenanceRequestController:
+// There is a function to POST a request
+// Data needed:
+// uid, description, urgency, category
 class MaintenanceFragment : Fragment() {
 
     override fun onCreateView(

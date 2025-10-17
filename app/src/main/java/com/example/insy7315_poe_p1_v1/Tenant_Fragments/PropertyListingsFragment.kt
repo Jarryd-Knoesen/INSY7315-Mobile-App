@@ -9,6 +9,8 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.example.insy7315_poe_p1_v1.R
 
+//PropertiesController
+// There is a function to get all the properties that are available
 class PropertyListingsFragment : Fragment() {
     override fun onCreateView(
     inflater: LayoutInflater,

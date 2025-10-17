@@ -1,62 +1,54 @@
 package com.example.insy7315_poe_p1_v1
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
-import android.widget.EditText
+import android.util.Log
+import android.widget.*
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.insy7315_poe_p1_v1.Models.UsersModel
-import com.example.insy7315_poe_p1_v1.Models.UsersRepository
-import android.util.Log
 import com.example.insy7315_poe_p1_v1.Services.LoginService
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.common.SignInButton
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.coroutines.tasks.await
-import com.google.firebase.Firebase
-import com.google.firebase.firestore.firestore
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var auth: FirebaseAuth
+    private lateinit var googleSignInClient: GoogleSignInClient
+    private val db = FirebaseFirestore.getInstance()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // Initialize shared preferences with default values if they don't exist
-        val sharedPref = getSharedPreferences("AppSettings", Context.MODE_PRIVATE)
-        if (!sharedPref.contains("DarkMode")) {
-            with(sharedPref.edit()) {
-                putBoolean("DarkMode", false)
-                putString("Language", "en")
-                apply()
-            }
-        }
+        auth = FirebaseAuth.getInstance()
 
-//        val oldDoc = "A11"
-//        val newDoc = "A101"
-//        val oldDoc2 = "B11"
-//        val newDoc2 = "A102"
-//
-//        CoroutineScope(Dispatchers.IO).launch {
-//            renameLeaseDocument(oldDoc, newDoc)
-//            renameLeaseDocument(oldDoc2, newDoc2)
-//        }
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
 
+        googleSignInClient = GoogleSignIn.getClient(this, gso)
 
         val login = findViewById<Button>(R.id.btnLogin)
         val signup = findViewById<TextView>(R.id.tvSignup)
+        val googleLogin = findViewById<SignInButton>(R.id.btnGoogleLogin)
 
         val emailInput = findViewById<EditText>(R.id.etEmailAddress)
         val passwordInput = findViewById<EditText>(R.id.etPassword)
@@ -65,109 +57,92 @@ class MainActivity : AppCompatActivity() {
             val email = emailInput.text.toString()
             val password = passwordInput.text.toString()
 
-            // Call the service instead of local repo
             LoginService.authenticateUser(email, password) { user ->
                 if (user == null) {
                     runOnUiThread {
-
                         emailInput.error = "Invalid email or password"
                         passwordInput.error = "Invalid email or password"
                     }
                 } else {
-                    // Save userType in SharedPreferences
                     val sharedPref = getSharedPreferences("UserData", MODE_PRIVATE)
                     with(sharedPref.edit()) {
                         putString("userType", user.userType)
                         apply()
                     }
 
-                    // Redirect by user type
                     when (user.userType) {
-                        "Tenant" -> {
-                            startActivity(Intent(this, Tenant_Home::class.java))
-                            finish()
-                        }
-                        "Manager" -> {
-                            startActivity(Intent(this, Manager_Home::class.java))
-                            finish()
-                        }
-                        "Caretaker" -> {
-                            startActivity(Intent(this, Caretaker_Home::class.java))
-                            finish()
-                        }
-                        "Admin" -> {
-                            startActivity(Intent(this, Admin_Home::class.java))
-                            finish()
-                        }
-                        else -> {
-                            Log.w("MainActivity", "Unknown user type: ${user.userType}")
-                        }
+                        "Tenant" -> startActivity(Intent(this, Tenant_Home::class.java))
+                        "Manager" -> startActivity(Intent(this, Manager_Home::class.java))
+                        "Caretaker" -> startActivity(Intent(this, Caretaker_Home::class.java))
+                        "Admin" -> startActivity(Intent(this, Admin_Home::class.java))
+                        else -> Log.w("MainActivity", "Unknown user type: ${user.userType}")
                     }
+                    finish()
                 }
             }
         }
 
+        googleLogin.setOnClickListener {
+            googleSignInClient.signOut().addOnCompleteListener {
+                googleSignInClient.revokeAccess().addOnCompleteListener {
+                    launcher.launch(googleSignInClient.signInIntent)
+                }
+            }
+        }
 
         signup.setOnClickListener {
             startActivity(Intent(this, Signup::class.java))
             finish()
         }
-
-        // database
-//        val dbTest2 = Firebase.firestore
-//        // Writing to the DB
-//        dbTest2.collection("tester").document("test")
-//            .set(mapOf("status" to "Working"))
-//            .addOnSuccessListener { Log.d("Firestore", "Write successful") }
-//            .addOnFailureListener { e -> Log.e("Firestore", "Write failed", e) }
-//
-//        // Reading from the DB
-//        dbTest2.collection("tester").document("test")
-//            .get()
-//            .addOnSuccessListener { document ->
-//                if (document != null && document.exists()) {
-//                    val status = document.getString("status") ?: "No value"
-//                    emailInput.hint = status
-//                    Log.d("Firestore", "Fetched status: $status")
-//                } else {
-//                    Log.w("Firestore", "No such document")
-//                }
-//            }
-//            .addOnFailureListener { e ->
-//                Log.e("Firestore", "Read failed", e)
-//            }
-
     }
 
-    fun getUserIfValid(password: String, email: String): UsersModel? {
-        return UsersRepository.users.find {
-            it.email == email && it.password == password
-        }
-    }
-
-    suspend fun renameLeaseDocument(oldId: String, newId: String) {
-        val db = Firebase.firestore
-//        val oldDocRef = db.collection("properties/Birchleigh/units").document(oldId)
-//        val newDocRef = db.collection("properties/Birchleigh/units").document(newId)
-        val oldDocRef = db.collection("properties").document("Birchleigh").collection("units").document(oldId)
-        val newDocRef = db.collection("properties").document("Birchleigh").collection("units").document(newId)
-
-
+    private val launcher = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        val task = GoogleSignIn.getSignedInAccountFromIntent(result.data)
         try {
-            val snapshot = oldDocRef.get().await()
-            if (snapshot.exists()) {
-                val data = snapshot.data
+            val account = task.getResult(ApiException::class.java)
+            val credential = GoogleAuthProvider.getCredential(account.idToken, null)
 
-                if (data != null) {
-                    newDocRef.set(data).await()
+            auth.signInWithCredential(credential).addOnCompleteListener { authTask ->
+                if (authTask.isSuccessful) {
+                    val user = auth.currentUser
+                    if (user != null) {
+                        val email = user.email ?: return@addOnCompleteListener
 
-                    oldDocRef.delete().await()
+                        val userRef = db.collection("users").document(user.uid)
+                        userRef.get().addOnSuccessListener { document ->
+                            if (!document.exists()) {
+                                val userData = hashMapOf(
+                                    "name" to (user.displayName ?: ""),
+                                    "phoneNumber" to (user.phoneNumber ?: ""),
+                                    "email" to email,
+                                    "signInMethod" to "google",
+                                    "createdAt" to FieldValue.serverTimestamp(),
+                                    "preferences" to mapOf(
+                                        "language" to "en",
+                                        "theme" to "light",
+                                        "notifications" to true
+                                    ),
+                                    "located" to "",
+                                    "status" to "",
+                                    "userType" to "Tenant"
+                                )
+                                userRef.set(userData)
+                            }
+                        }
+                    }
+
+                    Toast.makeText(this, "Google Sign-In successful", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, Tenant_Home::class.java))
+                    finish()
+                } else {
+                    Toast.makeText(this, "Google Sign-In failed", Toast.LENGTH_LONG).show()
                 }
-            } else {
-                println("No such document")
             }
-        } catch (e: Exception) {
-            println("Error: ${e.message}")
+        } catch (e: ApiException) {
+            Log.e("GoogleLogin", "Sign-In failed: ${e.statusCode}")
+            Toast.makeText(this, "Google Sign-In failed", Toast.LENGTH_LONG).show()
         }
     }
 }

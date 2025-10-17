@@ -9,6 +9,10 @@ import androidx.fragment.app.Fragment
 import com.example.insy7315_poe_p1_v1.R
 import android.widget.Button
 
+// InvoicesController
+// There is a function to make a payment
+// Data needed:
+// uid, amount
 class MakePaymentFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,

@@ -14,6 +14,17 @@ import com.example.insy7315_poe_p1_v1.Models.PropertiesRepository
 import com.example.insy7315_poe_p1_v1.Models.PropertiesModel
 import com.example.insy7315_poe_p1_v1.R
 
+// PropertiesController
+// There is a function to get the properties
+// No data needed
+
+// UnitsController
+// Added 'Add User to unit' and 'Remove user to Unit' functions in the API
+// They will updated the select unit and linked lease
+// Data needed for adding a user to a unit:
+// deposit, rentAmount, tenantID (email lowercase), startDate, endDate
+
+// Can be found in UnitsController
 class PropertyListing : Fragment() {
 
     private lateinit var recyclerView: RecyclerView

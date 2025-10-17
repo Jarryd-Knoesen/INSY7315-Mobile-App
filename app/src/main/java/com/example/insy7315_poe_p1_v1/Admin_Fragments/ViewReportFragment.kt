@@ -9,6 +9,8 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.example.insy7315_poe_p1_v1.R
 
+// ReportController
+// The function is called on the generateReportFragment and displayed here
 class ViewReportFragment : Fragment() {
 
     @SuppressLint("MissingInflatedId")

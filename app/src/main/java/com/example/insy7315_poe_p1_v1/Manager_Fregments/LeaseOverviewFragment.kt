@@ -16,6 +16,10 @@ import com.example.insy7315_poe_p1_v1.Models.LeaseModel
 import com.example.insy7315_poe_p1_v1.Models.LeaseRepository
 import com.example.insy7315_poe_p1_v1.R
 
+// LeaseController
+// There is a function to get the leases
+// Data needed:
+// uid
 class LeaseOverviewFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: LeasesAdapter

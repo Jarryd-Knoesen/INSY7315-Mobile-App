@@ -98,21 +98,12 @@
                                     android:textColor="?android:textColor" />
 
                                 <TextView
-                                    android:id="@+id/header_source"
+                                    android:id="@+id/header_person"
                                     android:layout_width="125dp"
                                     android:layout_height="30dp"
                                     android:clickable="true"
                                     android:focusable="true"
-                                    android:text="@string/text_source"
-                                    android:textColor="?android:textColor" />
-
-                                <TextView
-                                    android:id="@+id/header_property"
-                                    android:layout_width="125dp"
-                                    android:layout_height="30dp"
-                                    android:clickable="true"
-                                    android:focusable="true"
-                                    android:text="@string/text_property"
+                                    android:text="Person"
                                     android:textColor="?android:textColor" />
 
                                 <TextView
@@ -122,6 +113,15 @@
                                     android:clickable="true"
                                     android:focusable="true"
                                     android:text="@string/text_category"
+                                    android:textColor="?android:textColor" />
+
+                                <TextView
+                                    android:id="@+id/header_issue"
+                                    android:layout_width="125dp"
+                                    android:layout_height="30dp"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:text="Issue"
                                     android:textColor="?android:textColor" />
 
                                 <TextView

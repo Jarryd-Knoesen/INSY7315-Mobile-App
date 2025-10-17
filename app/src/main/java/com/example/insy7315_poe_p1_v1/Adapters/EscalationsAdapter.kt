@@ -28,9 +28,9 @@ RecyclerView.Adapter<EscalationsAdapter.EscalationViewHolder>() {
     class EscalationViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val idTextView: TextView = itemView.findViewById(R.id.escalationID)
         val dateTextView: TextView = itemView.findViewById(R.id.date_time)
-        val sourceTextView: TextView = itemView.findViewById(R.id.source)
-        val propertyTextView: TextView = itemView.findViewById(R.id.property)
+        val sourceTextView: TextView = itemView.findViewById(R.id.person)
         val categoryTextView: TextView = itemView.findViewById(R.id.category)
+        val issueTextView: TextView = itemView.findViewById(R.id.issue)
         val statusTextView: TextView = itemView.findViewById(R.id.status)
         val priorityTextView: TextView = itemView.findViewById(R.id.priority)
     }
@@ -46,8 +46,8 @@ RecyclerView.Adapter<EscalationsAdapter.EscalationViewHolder>() {
         holder.idTextView.text = escalation.escalationID
         holder.dateTextView.text = dateFormat.format(escalation.dateTime)
         holder.sourceTextView.text = escalation.source
-        holder.propertyTextView.text = escalation.property
         holder.categoryTextView.text = escalation.category
+        holder.issueTextView.text = escalation.issue
         holder.statusTextView.text = escalation.status
         holder.priorityTextView.text = escalation.priority
     }

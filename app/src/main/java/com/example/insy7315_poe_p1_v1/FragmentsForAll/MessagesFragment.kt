@@ -9,6 +9,10 @@ import androidx.fragment.app.Fragment
 import com.example.insy7315_poe_p1_v1.R
 import android.widget.TextView
 
+// MessagesController
+// There is a function to get the messages
+// Get messages: will get the messages of the current user and the selected user
+
 class MessagesFragment : Fragment() {
 
     private var userId: String? = null

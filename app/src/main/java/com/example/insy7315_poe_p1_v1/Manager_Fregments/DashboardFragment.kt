@@ -7,6 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.insy7315_poe_p1_v1.R
 
+// ManagerdashboardController
+// There is a function to get the data to fill out the dashboard
+// Data needed:
+// uid
 class DashboardFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,

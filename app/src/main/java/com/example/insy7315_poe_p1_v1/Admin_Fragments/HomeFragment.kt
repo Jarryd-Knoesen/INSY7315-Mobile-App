@@ -7,6 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.insy7315_poe_p1_v1.R
 
+// ManagerdashoboardController
+// There is a fragment to get all the necessary data
+// Data needed:
+// uid
 class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,

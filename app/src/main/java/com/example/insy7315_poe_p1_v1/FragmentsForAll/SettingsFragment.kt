@@ -15,6 +15,9 @@ import android.widget.Spinner
 import android.widget.AdapterView
 import java.util.Locale
 
+// ProfileController
+// There is a function to get the users info
+// That function will be called in the profile fragment
 class SettingsFragment : Fragment() {
 
     private var selectedLanguageCode: String? = null

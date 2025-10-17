@@ -2,7 +2,6 @@ package com.example.insy7315_poe_p1_v1
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -29,7 +28,7 @@ class Admin_Home : AppCompatActivity() {
         setContentView(R.layout.activity_admin_home)
 
         drawerLayout = findViewById(R.id.drawerLayout)
-//        val btnMenu = findViewById<Button>(R.id.btnMenu)
+
         val smDashboard = findViewById<TextView>(R.id.smDashboard)
         val smManageUsers = findViewById<TextView>(R.id.smManageUsers)
         val smReports = findViewById<TextView>(R.id.smReports)

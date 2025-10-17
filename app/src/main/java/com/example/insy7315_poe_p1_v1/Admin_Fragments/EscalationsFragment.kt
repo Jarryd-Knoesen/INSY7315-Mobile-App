@@ -16,6 +16,10 @@ import com.example.insy7315_poe_p1_v1.Models.EscalationsModel
 import com.example.insy7315_poe_p1_v1.Models.EscalationsRepository
 import com.example.insy7315_poe_p1_v1.R
 
+// AiEscalationController
+// There is a function to get the escalation data
+// Data needed:
+// uid
 class EscalationsFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
@@ -45,8 +49,7 @@ class EscalationsFragment : Fragment() {
         // Setup sorting headers
         setupSortHeader(view.findViewById(R.id.header_id)) { it.escalationID }
         setupSortHeader(view.findViewById(R.id.header_date)) { it.dateTime }
-        setupSortHeader(view.findViewById(R.id.header_source)) { it.source }
-        setupSortHeader(view.findViewById(R.id.header_property)) { it.property }
+        setupSortHeader(view.findViewById(R.id.header_person)) { it.person }
         setupSortHeader(view.findViewById(R.id.header_category)) { it.category }
         setupSortHeader(view.findViewById(R.id.header_status)) { it.status }
         setupSortHeader(view.findViewById(R.id.header_priority)) { it.priority }
@@ -55,8 +58,7 @@ class EscalationsFragment : Fragment() {
             val filteredList = escalationList.filter { escalation ->
                 escalation.escalationID.contains(query.toString(), ignoreCase = true) ||
                 escalation.dateTime.toString().contains(query.toString(), ignoreCase = true) ||
-                escalation.source.contains(query.toString(), ignoreCase = true) ||
-                escalation.property.contains(query.toString(), ignoreCase = true) ||
+                escalation.person.contains(query.toString(), ignoreCase = true) ||
                 escalation.category.contains(query.toString(), ignoreCase = true) ||
                 escalation.status.contains(query.toString(), ignoreCase = true) ||
                 escalation.priority.contains(query.toString(), ignoreCase = true)
